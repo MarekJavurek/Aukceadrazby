@@ -19,6 +19,7 @@
        android:id="@+id/ButtonMainActivity_jindra_ukol4"
        />
     <Button
+    android:layout_below="@+id/ButtonMainActivity_jindra_ukol4"
     android:text="@string/ButtonMainActivity_marekUkol4"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
