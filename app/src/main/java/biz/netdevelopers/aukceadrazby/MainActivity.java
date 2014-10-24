@@ -9,7 +9,7 @@ import android.view.MenuItem;
 public class MainActivity extends Activity {
 
     // hhh
-    // marek ahoj
+    // marek ahojj
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
