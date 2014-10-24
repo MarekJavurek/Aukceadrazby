@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ButtonMainActivity_marekUkol4">Mark homework: 4</string>
+    <string name="TextViewRegFormularJindraUkol4Activity">Registrační formulář hotelu Hovinko</string>
+    <string name="TextViewJindraActivityAdresa">Adresa</string>
+    <string name="TextViewJindraActivityTelefon">Telefon</string>
+    <string name="TextViewJindraActivityEmail">email</string>
+    <string name="TextViewJindraActivityZacatekPobytu">Zacatek pobytu</string>
+    <string name="TextViewJindraActivityPocetdnu">počet dnů</string>
     <string name="MarekUkol4Activity_nazevhotelu">Registrační formulář hotelu Marek</string>
 </resources>
