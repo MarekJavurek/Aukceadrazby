@@ -1,12 +1,10 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity">
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".MainActivity"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
 
    <Button
        android:textSize="20sp"
@@ -18,12 +16,12 @@
        android:text="@string/ButtonMainActivity_jindra_ukol4"
        android:id="@+id/ButtonMainActivity_jindra_ukol4"
        />
+
     <Button
-    android:layout_below="@+id/ButtonMainActivity_jindra_ukol4"
     android:text="@string/ButtonMainActivity_marekUkol4"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:onClick="ClickMarekUkol4"
     />
 
-</RelativeLayout>
+    </LinearLayout>
