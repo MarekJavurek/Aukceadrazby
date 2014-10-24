@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="ButtonMainActivity_marekUkol4">Mark homework: 4</string>
+    <string name="MarekUkol4Activity_nazevhotelu">Registrační formulář hotelu Marek</string>
 </resources>
