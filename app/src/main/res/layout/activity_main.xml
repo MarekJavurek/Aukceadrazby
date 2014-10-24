@@ -1,27 +1,27 @@
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".MainActivity"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical">
-
-   <Button
-       android:textSize="20sp"
-       android:onClick="ClickJindraUkol4"
-       android:textColor="#3762D2"
-       android:padding="10dp"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:text="@string/ButtonMainActivity_jindra_ukol4"
-       android:id="@+id/ButtonMainActivity_jindra_ukol4"
-       />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
     <Button
-    android:text="@string/ButtonMainActivity_marekUkol4"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:onClick="ClickMarekUkol4"
-    />
+        android:textSize="20sp"
+        android:onClick="ClickJindraUkol4"
+        android:textColor="#3762D2"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ButtonMainActivity_jindra_ukol4"
+        android:id="@+id/ButtonMainActivity_jindra_ukol4"
+        />
+
+    <Button
+        android:text="@string/ButtonMainActivity_marekUkol4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="ClickMarekUkol4"
+        />
 
     </LinearLayout>

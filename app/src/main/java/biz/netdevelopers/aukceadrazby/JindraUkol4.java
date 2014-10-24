@@ -4,6 +4,11 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class JindraUkol4 extends Activity {
@@ -12,6 +17,20 @@ public class JindraUkol4 extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jindra_ukol4);
+
+
+        //naplneni spineru
+        List<String> dataSpinneru = new ArrayList<String>();
+        for (int i= 1;i<31;i++)
+        {
+            dataSpinneru.add(Integer.toString(i));
+        }
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, dataSpinneru);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        Spinner sItems = (Spinner) findViewById(R.id.JindraActivitySpinerPocetdni);
+        sItems.setAdapter(adapter);
+
+
     }
 
 
@@ -33,4 +52,5 @@ public class JindraUkol4 extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

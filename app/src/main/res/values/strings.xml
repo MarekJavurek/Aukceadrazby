@@ -8,5 +8,12 @@
     <string name="ButtonMainActivity_jindra_ukol4">Jindra Ukol:4</string>
     <string name="title_activity_marek_ukol4">MarekUkol4</string>
     <string name="ButtonMainActivity_marekUkol4">Marek ukol: 4</string>
+    <string name="TextViewRegFormularJindraUkol4">Registrační formulář hotelu Hovinko</string>
+    <string name="TextViewJindraActivityJmeno">jméno a příjmení</string>
+    <string name="TextViewJindraActivityAdresa">Adresa</string>
+    <string name="TextViewJindraActivityTelefon">Telefon</string>
+    <string name="TextViewJindraActivityEmail">email</string>
+    <string name="TextViewJindraActivityZacatekPobytu">Zacatek pobytu</string>
+    <string name="TextViewJindraActivityPocetdnu">počet dnů</string>
 
 </resources>
