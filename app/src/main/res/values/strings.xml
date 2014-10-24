@@ -4,5 +4,7 @@
     <string name="app_name">Aukceadrazby</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_marek_ukol4">MarekUkol4</string>
+    <string name="ButtonMainActivity_marekUkol4">Marek ukol: 4</string>
 
 </resources>
