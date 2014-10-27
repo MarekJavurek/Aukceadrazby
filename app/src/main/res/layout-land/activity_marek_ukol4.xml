@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#C1E3C6"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/MJA_4_linearsprvky"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/MJA_4_nazevhotelu"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="@string/MJA_4_jmenoAprijmeni" />
+
+            <EditText
+                android:id="@+id/MJA_4_jmenoaprijmeni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_adresa" />
+
+            <EditText
+                android:id="@+id/MJA_4_adresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_telefon" />
+
+            <EditText
+                android:id="@+id/MJA_4_telefon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_email" />
+
+            <EditText
+                android:id="@+id/MJA_4_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_zacatekPobytu" />
+
+            <DatePicker
+                android:id="@+id/MJA_4_datumod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_pocetDnu" />
+
+            <Spinner
+                android:id="@+id/pocetdni"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_pokoj" />
+
+            <RadioGroup
+                android:id="@+id/MJA_4_radiogroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MJA_4_jednoluzkovy" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MJA_4_dvouluzkovy" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MJA_4_triluzkovy" />
+
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/MJA_4_snidane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_snidane" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MJA_4_kurak" />
+
+            <ToggleButton
+                android:id="@+id/MJA_4_kurak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="@string/MJA_4_ne"
+                android:textOn="@string/MJA_4_ano" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#e31e1e"
+                android:onClick="OnclickZrusit"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/MJA_4_zrusit" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#10ce59"
+                android:onClick="OnclickOdeslat"
+                android:drawableLeft="@drawable/ic_launcher"
+                android:text="@string/MJA_4_odeslatformular" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
