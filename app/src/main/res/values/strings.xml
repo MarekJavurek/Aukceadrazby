@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Aukceadrazby</string>
+    <string name="app_name">Aukce a Drazby</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_jindra_ukol4">JindraUkol4</string>
     <string name="ButtonMainActivity_jindra_ukol4">Jindra Ukol:4</string>
     <string name="title_activity_marek_ukol4">MarekUkol4</string>
-    <string name="ButtonMainActivity_marekUkol4">Marek ukol: 4</string>
-    <string name="MarekUkol4Activity_nazevhotelu">Registrační formulář hotelu Marek</string>
     <string name="TextViewRegFormularJindraUkol4">Registrační formulář hotelu Hovinko</string>
     <string name="TextViewJindraActivityJmeno">jméno a příjmení</string>
     <string name="TextViewJindraActivityAdresa">Adresa</string>
@@ -16,5 +14,23 @@
     <string name="TextViewJindraActivityEmail">email</string>
     <string name="TextViewJindraActivityZacatekPobytu">Zacatek pobytu</string>
     <string name="TextViewJindraActivityPocetdnu">počet dnů</string>
+    <string name="ButtonMainActivity_marekUkol4">Marek ukol: 4</string>
+    <string name="MJA_4_nazevhotelu">Registrační formulář hotelu Marek</string>
+    <string name="MJA_4_jmenoAprijmeni">Jméno a příjmení</string>
+    <string name="MJA_4_adresa">Adresa</string>
+    <string name="MJA_4_telefon">Telefon</string>
+    <string name="MJA_4_email">E-mail</string>
+    <string name="MJA_4_zacatekPobytu">Začátek pobytu</string>
+    <string name="MJA_4_pocetDnu">Počet dnů</string>
+    <string name="MJA_4_pokoj">Pokoj</string>
+    <string name="MJA_4_jednoluzkovy">jedno lůžkový</string>
+    <string name="MJA_4_dvouluzkovy">dvou lůžkový</string>
+    <string name="MJA_4_triluzkovy">třílůžkový</string>
+    <string name="MJA_4_snidane">Snídaně</string>
+    <string name="MJA_4_kurak">Kuřák</string>
+    <string name="MJA_4_ne">Ne</string>
+    <string name="MJA_4_ano">Ano</string>
+    <string name="MJA_4_zrusit">Zrušit</string>
+    <string name="MJA_4_odeslatformular">Odeslat formulář</string>
 
 </resources>

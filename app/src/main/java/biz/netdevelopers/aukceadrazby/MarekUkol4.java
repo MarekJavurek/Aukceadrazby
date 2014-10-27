@@ -2,9 +2,13 @@ package biz.netdevelopers.aukceadrazby;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -31,23 +35,27 @@ public class MarekUkol4 extends Activity {
 
     }
 
+    public void OnclickZrusit(View view) {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.marek_ukol4, menu);
-        return true;
+        // projde vsechny prvky v "MJA_4_linearsprvky" (LinearLayout) a kdyz se jedna o EditText tak ho vymaze
+        ViewGroup group = (ViewGroup)findViewById(R.id.MJA_4_linearsprvky);
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View v = group.getChildAt(i);
+            if (v instanceof EditText) {
+                ((EditText)v).setText("");
+            }
+        }
+
+
+        EditText jmeno = (EditText) findViewById(R.id.MJA_4_jmenoaprijmeni);
+        jmeno.setText("");
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
+    public void OnclickOdeslat(View view) {
+    }
+
+    // fce na validaci emailu
+    public final static boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 }
