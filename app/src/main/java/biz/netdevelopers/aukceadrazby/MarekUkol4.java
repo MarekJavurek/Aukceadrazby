@@ -11,11 +11,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -59,8 +64,33 @@ public class MarekUkol4 extends Activity {
         }
 
         // vymazani ostatnich prvku co nejsou EditText
-        EditText jmeno = (EditText) findViewById(R.id.MJA_4_jmenoaprijmeni);
-        jmeno.setText("");
+
+        // datepicker
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        DatePicker datumod = (DatePicker) findViewById(R.id.MJA_4_datumod);
+        datumod.updateDate(year, month, day);
+
+        // spinner
+        Spinner pocetdni = (Spinner) findViewById(R.id.pocetdni);
+        pocetdni.setSelection(0);
+
+        // radiogroup
+        RadioGroup rg = (RadioGroup) findViewById(R.id.MJA_4_radiogroup);
+        rg.clearCheck();
+
+        // checkbox
+        CheckBox ch = (CheckBox) findViewById(R.id.MJA_4_snidane);
+        ch.setChecked(false);
+
+        // togglebutton
+        ToggleButton tg = (ToggleButton) findViewById(R.id.MJA_4_kurak);
+        tg.setChecked(false);
+
+
     }
 
     // odeslani formulare

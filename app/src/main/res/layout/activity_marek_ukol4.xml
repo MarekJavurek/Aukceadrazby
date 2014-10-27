@@ -75,6 +75,7 @@
                 android:text="@string/MJA_4_zacatekPobytu" />
 
             <DatePicker
+                android:id="@+id/MJA_4_datumod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:calendarViewShown="false" />
@@ -95,6 +96,7 @@
                 android:text="@string/MJA_4_pokoj" />
 
             <RadioGroup
+                android:id="@+id/MJA_4_radiogroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -116,6 +118,7 @@
             </RadioGroup>
 
             <CheckBox
+                android:id="@+id/MJA_4_snidane"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/MJA_4_snidane" />
@@ -126,6 +129,7 @@
                 android:text="@string/MJA_4_kurak" />
 
             <ToggleButton
+                android:id="@+id/MJA_4_kurak"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textOff="@string/MJA_4_ne"
