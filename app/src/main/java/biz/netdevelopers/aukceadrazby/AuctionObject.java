@@ -7,6 +7,7 @@ public class AuctionObject {
     private int advert_function;
     private int advert_type;
     private int advert_subtype;
+}
     /*
     advert_original_source: "CADR",
     locality_nuts: "CZ020A",
