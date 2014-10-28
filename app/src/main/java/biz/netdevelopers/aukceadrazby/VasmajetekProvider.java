@@ -1,9 +1,21 @@
 package biz.netdevelopers.aukceadrazby;
 
+import android.content.Context;
 import java.util.ArrayList;
 
 public class VasmajetekProvider {
 
+    Context context;
+    boolean isOnline;
+
+    public VasmajetekProvider(Context context) {
+        this.context = context;
+
+        Utils utils = new Utils(this.context);
+        this.isOnline = utils.isOnline();
+    }
+
+    // ziskani seznamu vsech aukci
     public ArrayList<AuctionObject> getAll() {
         ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
@@ -12,6 +24,7 @@ public class VasmajetekProvider {
         return all;
     }
 
+    // ziskani objektu konkretni aukce
     public AuctionObject getOne(int id) {
         AuctionObject one = new AuctionObject();
 
