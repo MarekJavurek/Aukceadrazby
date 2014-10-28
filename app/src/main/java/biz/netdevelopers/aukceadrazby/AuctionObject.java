@@ -7,10 +7,10 @@ public class AuctionObject {
     private int advert_function;
     private int advert_type;
     private int advert_subtype;
+    private String locality_nuts;
 }
     /*
     advert_original_source: "CADR",
-    locality_nuts: "CZ020A",
     private String "2014-10-29T00:00:00+01:00",
     created_time: "2014-08-27T02:00:03+02:00",
     updated_time: "2014-09-08T08:47:49+02:00",
@@ -70,4 +70,3 @@ public class AuctionObject {
     vm_url_source: "http://www.centralniadresa.cz/cadr/cadr02003Prepare.do?znackaZakazky=10950242",
     zinfo_billing: null
     */
-}
