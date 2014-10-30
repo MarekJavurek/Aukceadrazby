@@ -19,9 +19,16 @@ public class VasmajetekProvider {
     public ArrayList<AuctionObject> getAll() {
         ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
+        if (isOnline) {
+            getAuctionsAsync();
+        }
+        
         // TODO
 
         return all;
+    }
+
+    private void getAuctionsAsync() {
     }
 
     // ziskani objektu konkretni aukce
