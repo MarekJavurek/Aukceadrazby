@@ -2,10 +2,11 @@ package biz.netdevelopers.aukceadrazby;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+
 
 public class VasmajetekProvider {
 
@@ -24,7 +25,7 @@ public class VasmajetekProvider {
     }
 
     // ziskani seznamu vsech aukci
-    public ArrayList<AuctionObject> getAll() {
+    public ArrayList<AuctionObject> getAll() throws ExecutionException, InterruptedException {
         ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
         if (isOnline) {
@@ -65,14 +66,14 @@ public class VasmajetekProvider {
                 }
             };
             dft.execute(dfto);
-
-
+            String aResultM = dft.get();
+            // TODO
         } else {
             String lastUpdate = "?";
             new Utils(this.context).TL("Nejsi online, poslední aktualizace dat: " + lastUpdate);
             // TODO
         }
-        return all;
+        return null;
     }
 
 

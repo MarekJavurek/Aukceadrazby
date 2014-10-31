@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import java.net.MalformedURLException;
+import java.util.concurrent.ExecutionException;
 
 
 public class MainActivity extends Activity {
@@ -20,7 +21,13 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         vmp = new VasmajetekProvider(this);
-        vmp.getAll();
+        try {
+            vmp.getAll();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
     // NASTUDOVAT
@@ -46,8 +53,7 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void ClickJindraUkol4(View view)
-    {
+    public void ClickJindraUkol4(View view) {
         Intent intent = new Intent(this, JindraUkol4.class);
         startActivity(intent);
     }

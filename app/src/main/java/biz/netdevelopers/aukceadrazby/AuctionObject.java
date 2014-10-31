@@ -8,6 +8,62 @@ public class AuctionObject {
     private int advert_type;
     private int advert_subtype;
     private String locality_nuts;
+
+    public int getOffer_id() {
+        return offer_id;
+    }
+
+    public void setOffer_id(int offer_id) {
+        this.offer_id = offer_id;
+    }
+
+    public int getVersion() {
+        return version;
+    }
+
+    public void setVersion(int version) {
+        this.version = version;
+    }
+
+    public String getAdvert_name() {
+        return advert_name;
+    }
+
+    public void setAdvert_name(String advert_name) {
+        this.advert_name = advert_name;
+    }
+
+    public int getAdvert_function() {
+        return advert_function;
+    }
+
+    public void setAdvert_function(int advert_function) {
+        this.advert_function = advert_function;
+    }
+
+    public int getAdvert_type() {
+        return advert_type;
+    }
+
+    public void setAdvert_type(int advert_type) {
+        this.advert_type = advert_type;
+    }
+
+    public int getAdvert_subtype() {
+        return advert_subtype;
+    }
+
+    public void setAdvert_subtype(int advert_subtype) {
+        this.advert_subtype = advert_subtype;
+    }
+
+    public String getLocality_nuts() {
+        return locality_nuts;
+    }
+
+    public void setLocality_nuts(String locality_nuts) {
+        this.locality_nuts = locality_nuts;
+    }
 }
     /*
     advert_original_source: "CADR",
