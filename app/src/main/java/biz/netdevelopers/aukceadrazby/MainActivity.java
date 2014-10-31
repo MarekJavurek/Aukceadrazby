@@ -23,7 +23,9 @@ public class MainActivity extends Activity {
         vmp.getAll();
 
     }
-
+    // NASTUDOVAT
+    // http://stackoverflow.com/questions/15739635/how-to-return-value-from-async-task-in-android
+    // http://codereview.stackexchange.com/questions/39123/efficient-way-of-having-synchronous-and-asynchronous-behavior-in-an-application
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

@@ -37,11 +37,11 @@ public class VasmajetekProvider {
 
             dfto = new DownloadFilesTaskObject();
             try {
-                dfto.setUrl(new URL("http://netdevelopers.biz/_da/download.php"));
+                dfto.setUrl(new URL("http://netdevelopers.biz/_da/download.php")); // http://netdevelopers.biz/_da/download.php // http://ipv6.download.thinkbroadband.com/5MB.zip
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-            dfto.setDestination(this.context.getFilesDir() + "all.json");
+            dfto.setDestination(this.context.getFilesDir() + "all.json"); // this.context.getFilesDir() + //"/sdcard/all.json"
 
             dft = new DownloadFilesTask(this.context) {
                 @Override
