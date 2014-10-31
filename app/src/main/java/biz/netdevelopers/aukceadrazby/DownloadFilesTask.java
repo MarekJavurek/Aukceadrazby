@@ -105,8 +105,8 @@ public class DownloadFilesTask extends AsyncTask<DownloadFilesTaskObject, Intege
         mWakeLock.release();
         //mProgressDialog.dismiss();
         if (result != null)
-            Toast.makeText(context, "Download error: " + result, Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Chyba: aktualizace se nezdařila: " + result, Toast.LENGTH_LONG).show();
         else
-            Toast.makeText(context, "File downloaded", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Data byla aktualizována", Toast.LENGTH_LONG).show();
     }
 }

@@ -1,5 +1,6 @@
 package biz.netdevelopers.aukceadrazby;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 
 import java.net.MalformedURLException;
@@ -14,28 +15,63 @@ public class VasmajetekProvider {
     DownloadFilesTask dft;
     DownloadFilesTaskObject dfto;
 
+    ProgressDialog mProgressDialog;
+
     public VasmajetekProvider(Context context) {
         this.context = context;
 
-        Utils utils = new Utils(this.context);
-        this.isOnline = utils.isOnline();
+        this.isOnline = new Utils(this.context).isOnline();
     }
 
     // ziskani seznamu vsech aukci
-    public ArrayList<AuctionObject> getAll() throws MalformedURLException {
+    public ArrayList<AuctionObject> getAll() {
         ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
         if (isOnline) {
+
+            mProgressDialog = new ProgressDialog(this.context);
+            mProgressDialog.setMessage("Aktualizace dat...");
+            mProgressDialog.setIndeterminate(true);
+            mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+            mProgressDialog.setCancelable(true);
+
             dfto = new DownloadFilesTaskObject();
-            dfto.setUrl(new URL("http://netdevelopers.biz/_da/download.php"));
-            dfto.setDestination("/sdcard/all.json");
+            try {
+                dfto.setUrl(new URL("http://netdevelopers.biz/_da/download.php"));
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            dfto.setDestination(this.context.getFilesDir() + "all.json");
 
-            dft = new DownloadFilesTask(this.context);
-            //dft.execute()
+            dft = new DownloadFilesTask(this.context) {
+                @Override
+                protected void onPreExecute() {
+                    super.onPreExecute();
+                    mProgressDialog.show();
+                }
+
+                @Override
+                protected void onProgressUpdate(Integer... progress) {
+                    super.onProgressUpdate(progress);
+                    mProgressDialog.setIndeterminate(false);
+                    mProgressDialog.setMax(100);
+                    mProgressDialog.setProgress(progress[0]);
+                }
+
+                @Override
+                protected void onPostExecute(String result) {
+                    super.onPostExecute(result);
+                    mProgressDialog.dismiss();
+                }
+            };
+            dft.execute(dfto);
+
+
+        } else {
+            String lastUpdate = "?";
+            new Utils(this.context).TL("Nejsi online, poslední aktualizace dat: " + lastUpdate);
+            // TODO
         }
-        
-        // TODO
-
         return all;
     }
 

@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.net.MalformedURLException;
+
 
 public class MainActivity extends Activity {
 
@@ -18,6 +20,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         vmp = new VasmajetekProvider(this);
+        vmp.getAll();
 
     }
 
