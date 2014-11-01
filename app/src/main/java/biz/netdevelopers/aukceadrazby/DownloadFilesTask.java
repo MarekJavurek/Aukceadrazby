@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.PowerManager;
 import android.widget.Toast;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,7 +11,8 @@ import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-
+// trda dedi od AsyncTask takze na 3 zakladni fce doInBackground, onPreExecute, onPostExecute
+// pouzita pro stahovani v novem vlakne aby aplikace nezamrzla
 public class DownloadFilesTask extends AsyncTask<DownloadFilesTaskObject, Integer, String> {
 
     private Context context;
@@ -32,8 +32,7 @@ public class DownloadFilesTask extends AsyncTask<DownloadFilesTaskObject, Intege
             connection = (HttpURLConnection) url.openConnection();
             connection.connect();
 
-            // expect HTTP 200 OK, so we don't mistakenly save error report
-            // instead of the file
+            // expect HTTP 200 OK, so we don't mistakenly save error report instead of the file
             if (connection.getResponseCode() != HttpURLConnection.HTTP_OK) {
                 return "Server returned HTTP " + connection.getResponseCode()
                         + " " + connection.getResponseMessage();
@@ -57,7 +56,7 @@ public class DownloadFilesTask extends AsyncTask<DownloadFilesTaskObject, Intege
                     return null;
                 }
                 total += count;
-                // publishing the progress....
+                // publishing the progress...
                 if (fileLength > 0) // only if total length is known
                     publishProgress((int) (total * 100 / fileLength));
                 output.write(data, 0, count);
@@ -92,7 +91,6 @@ public class DownloadFilesTask extends AsyncTask<DownloadFilesTaskObject, Intege
     @Override
     protected void onPostExecute(String result) {
         mWakeLock.release();
-        //mProgressDialog.dismiss();
         if (result != null)
             Toast.makeText(context, "Chyba: aktualizace se nezdařila: " + result, Toast.LENGTH_LONG).show();
         else

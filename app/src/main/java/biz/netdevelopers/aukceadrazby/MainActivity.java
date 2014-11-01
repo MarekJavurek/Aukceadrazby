@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // nova instance tridy ktera bude poskytovat veskera data z API atd...
         vmp = new VasmajetekProvider(this);
         try {
             vmp.getAll();

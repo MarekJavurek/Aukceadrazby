@@ -1,5 +1,6 @@
 package biz.netdevelopers.aukceadrazby;
 
+// TODO nutno doplnit všechny ostatní parametry
 public class AuctionObject {
     private int offer_id;
     private int version;

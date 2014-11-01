@@ -14,18 +14,21 @@ import java.util.concurrent.ExecutionException;
 
 public class VasmajetekProvider {
 
+    // kontext
     Context context;
+    // je uzivatel online
     boolean isOnline;
 
     DownloadFilesTask dft;
     DownloadFilesTaskObject dfto;
+    // cesta k souboru kde je ulozen soubor s poslednimy stazenymy daty vsech aukci JSON
     String finalAllDest;
-
+    // progress dialog stahovani
     ProgressDialog mProgressDialog;
 
+    // konstruktor
     public VasmajetekProvider(Context context) {
         this.context = context;
-
         this.isOnline = new Utils(this.context).isOnline();
     }
 
@@ -33,6 +36,8 @@ public class VasmajetekProvider {
     public ArrayList<AuctionObject> getAll() throws ExecutionException, InterruptedException {
         // ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
+
+        // je uzivatel online?
         if (isOnline) {
 
             mProgressDialog = new ProgressDialog(this.context);
@@ -72,8 +77,11 @@ public class VasmajetekProvider {
                     mProgressDialog.dismiss();
                 }
             };
+            // spusteni stahovani v novem vlakne, zatim jsem toto nedoresil
             dft.execute(dfto);
-            String aResultM = dft.get();
+
+            /*
+            String aResultM = dft.get(); // http://stackoverflow.com/questions/16912768/asynctasks-get-method-is-there-any-scenario-where-it-is-actually-the-best-op
 
             if (aResultM == null)
                 try {
@@ -83,6 +91,7 @@ public class VasmajetekProvider {
                 }
             else
                 return null;
+            */
 
         } else {
             String lastUpdate = "?";
@@ -94,6 +103,7 @@ public class VasmajetekProvider {
 
     // http://www.androidhive.info/2012/01/android-json-parsing-tutorial/
     // http://www.androidhive.info/2012/01/android-json-parsing-tutorial/
+    // konverze z souboru do arraylistu AuctionObject
     private ArrayList<AuctionObject> getArrayFromJSONAll(String dest) throws Exception {
 
         ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
