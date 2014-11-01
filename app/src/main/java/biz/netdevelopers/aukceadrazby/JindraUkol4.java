@@ -21,8 +21,7 @@ public class JindraUkol4 extends Activity {
 
         //naplneni spineru
         List<String> dataSpinneru = new ArrayList<String>();
-        for (int i= 1;i<31;i++)
-        {
+        for (int i = 1; i < 31; i++) {
             dataSpinneru.add(Integer.toString(i));
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, dataSpinneru);

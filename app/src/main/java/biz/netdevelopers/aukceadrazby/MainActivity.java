@@ -30,7 +30,6 @@ public class MainActivity extends Activity {
         }
 
     }
-    // NASTUDOVAT
     // http://stackoverflow.com/questions/15739635/how-to-return-value-from-async-task-in-android
     // http://codereview.stackexchange.com/questions/39123/efficient-way-of-having-synchronous-and-asynchronous-behavior-in-an-application
 

@@ -2,6 +2,10 @@ package biz.netdevelopers.aukceadrazby;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -15,6 +19,7 @@ public class VasmajetekProvider {
 
     DownloadFilesTask dft;
     DownloadFilesTaskObject dfto;
+    String finalAllDest;
 
     ProgressDialog mProgressDialog;
 
@@ -26,7 +31,7 @@ public class VasmajetekProvider {
 
     // ziskani seznamu vsech aukci
     public ArrayList<AuctionObject> getAll() throws ExecutionException, InterruptedException {
-        ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
+        // ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
         if (isOnline) {
 
@@ -42,7 +47,9 @@ public class VasmajetekProvider {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
-            dfto.setDestination(this.context.getFilesDir() + "all.json"); // this.context.getFilesDir() + //"/sdcard/all.json"
+
+            finalAllDest = this.context.getFilesDir() + "all.json";
+            dfto.setDestination(finalAllDest); // this.context.getFilesDir() + //"/sdcard/all.json"
 
             dft = new DownloadFilesTask(this.context) {
                 @Override
@@ -67,13 +74,45 @@ public class VasmajetekProvider {
             };
             dft.execute(dfto);
             String aResultM = dft.get();
-            // TODO
+
+            if (aResultM == null)
+                try {
+                    return getArrayFromJSONAll(finalAllDest); // TODO
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            else
+                return null;
+
         } else {
             String lastUpdate = "?";
             new Utils(this.context).TL("Nejsi online, poslední aktualizace dat: " + lastUpdate);
-            // TODO
+            // TODO pokud nejsi online nacti data od posledne
         }
         return null;
+    }
+
+    // http://www.androidhive.info/2012/01/android-json-parsing-tutorial/
+    // http://www.androidhive.info/2012/01/android-json-parsing-tutorial/
+    private ArrayList<AuctionObject> getArrayFromJSONAll(String dest) throws Exception {
+
+        ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
+
+        String json = Utils.getStringFromFile(dest);
+
+        JSONArray data = new JSONArray(json);
+
+        // looping through All nodes
+        for (int i = 0; i < data.length(); i++) {
+            JSONObject c = data.getJSONObject(i);
+            AuctionObject a = new AuctionObject();
+            a.setAdvert_name(c.getString("2"));
+            //TODO add other elements
+            //use >  int id = c.getInt("duration"); if you want get an int
+            all.add(a);
+        }
+
+        return all;
     }
 
 
