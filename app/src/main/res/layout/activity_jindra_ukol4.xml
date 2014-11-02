@@ -155,7 +155,7 @@
                 android:drawableLeft="@drawable/ic_launcher_jindraukol4_fajfka"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
-                android:text="Tukni pro odeslani formulare"
+                android:text="Tukni pro  odeslani formulare"
                  android:layout_width="fill_parent"
                  android:layout_height="wrap_content"
                  android:background="#99CC00"
