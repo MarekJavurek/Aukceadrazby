@@ -32,5 +32,13 @@
     <string name="MJA_4_ano">Ano</string>
     <string name="MJA_4_zrusit">Zrušit</string>
     <string name="MJA_4_odeslatformular">Odeslat formulář</string>
+    <string name="JindraUkol4_jednoluzkovy">jedno lůžkový</string>
+    <string name="JindraUkol4_dvouluzkovy">dvou lůžkový</string>
+    <string name="JindraUkol4_triluzkovy">tri lůžkový</string>
+    <string name="JindraUkol4_pokoj">Pokoj</string>
+    <string name="JindraUkol4_ne">ne</string>
+    <string name="JindraUkol4_ano">ano</string>
+    <string name="JindraUkol4_kurak">kurak?</string>
+    <string name="JindraUkol4_snidane">snidane?</string>
 
 </resources>

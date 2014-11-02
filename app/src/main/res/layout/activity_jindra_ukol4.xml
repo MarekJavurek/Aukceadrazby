@@ -4,7 +4,9 @@
     tools:context=".MainActivity"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#afe8f6">
+
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -15,6 +17,7 @@
             android:orientation="vertical">
 
 <TextView
+    android:fontFamily="sans-serif-medium"
     android:paddingTop="20dp"
     android:textSize="23sp"
     android:layout_gravity="center"
@@ -23,6 +26,7 @@
     android:layout_height="wrap_content"
     />
     <TextView
+        android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:text="@string/TextViewJindraActivityJmeno"
         android:textSize="18sp"
@@ -36,6 +40,7 @@
         android:layout_height="wrap_content"
         />
     <TextView
+        android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:text="@string/TextViewJindraActivityAdresa"
         android:textSize="18sp"
@@ -49,6 +54,7 @@
         android:layout_height="wrap_content"
         />
     <TextView
+        android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:text="@string/TextViewJindraActivityTelefon"
         android:textSize="18sp"
@@ -62,6 +68,7 @@
         android:layout_height="wrap_content"
         />
     <TextView
+        android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:text="@string/TextViewJindraActivityEmail"
         android:textSize="18sp"
@@ -75,6 +82,7 @@
         android:layout_height="wrap_content"
         />
     <TextView
+        android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:text="@string/TextViewJindraActivityZacatekPobytu"
         android:textSize="18sp"
@@ -87,6 +95,7 @@
         android:layout_height="match_parent"></DatePicker>
 
     <TextView
+        android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:text="@string/TextViewJindraActivityPocetdnu"
         android:textSize="18sp"
@@ -97,6 +106,70 @@
         android:id="@+id/JindraActivitySpinerPocetdni"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"></Spinner>
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="@string/JindraUkol4_pokoj"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <RadioGroup
+                android:paddingLeft="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:text="@string/JindraUkol4_jednoluzkovy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:text="@string/JindraUkol4_dvouluzkovy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:text="@string/JindraUkol4_triluzkovy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </RadioGroup>
+            <CheckBox
+                android:paddingTop="20dp"
+                android:text="@string/JindraUkol4_snidane"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="@string/JindraUkol4_kurak"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <ToggleButton
+                android:textOff="@string/JindraUkol4_ne"
+                android:textOn="@string/JindraUkol4_ano"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/ButtonJindraukol4Activity_odeslatformular"
+                android:drawableLeft="@drawable/ic_launcher_jindraukol4_fajfka"
+                 android:layout_marginLeft="15dp"
+                 android:layout_marginRight="15dp"
+                android:text="Tukni pro odeslani formulare"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:background="#99CC00"
+                 />
+            <Button
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Tukni pro zruseni"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF4444"
+                />
+
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
