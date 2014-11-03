@@ -151,14 +151,13 @@
                 android:layout_height="wrap_content" />
 
             <Button
-                android:id="@+id/ButtonJindraukol4Activity_odeslatformular"
-                android:drawableLeft="@drawable/ic_launcher_jindraukol4_fajfka"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
                 android:text="Tukni pro odeslani formulare"
                  android:layout_width="fill_parent"
                  android:layout_height="wrap_content"
                  android:background="#99CC00"
+                android:drawableLeft="@drawable/ic_launcher_jindra_ukol4"
                  />
             <Button
                 android:layout_marginLeft="15dp"
@@ -167,6 +166,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="#FF4444"
+                android:drawableLeft="@drawable/ic_launcher_jindraukol4_krizek"
                 />
 
 

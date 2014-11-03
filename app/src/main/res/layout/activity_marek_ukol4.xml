@@ -148,7 +148,6 @@
                 android:layout_height="wrap_content"
                 android:background="#10ce59"
                 android:onClick="OnclickOdeslat"
-                android:drawableLeft="@drawable/ic_launcher"
                 android:text="@string/MJA_4_odeslatformular" />
 
         </LinearLayout>
