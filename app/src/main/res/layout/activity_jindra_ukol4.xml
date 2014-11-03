@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         />
     <EditText
+        android:id="@+id/EditText_jindraUkol4_jmenoPrijmeni"
         android:gravity="center"
         android:hint="..."
         android:layout_width="match_parent"
@@ -48,6 +49,7 @@
         android:layout_height="wrap_content"
         />
     <EditText
+        android:id="@+id/EditText_jindraUkol4_Adresa"
         android:gravity="center"
         android:hint="..."
         android:layout_width="match_parent"
@@ -62,6 +64,8 @@
         android:layout_height="wrap_content"
         />
     <EditText
+        android:inputType="phone"
+        android:id="@+id/EditText_jindraUkol4_Telefon"
         android:gravity="center"
         android:hint="..."
         android:layout_width="match_parent"
@@ -76,6 +80,7 @@
         android:layout_height="wrap_content"
         />
     <EditText
+        android:id="@+id/EditText_jindraUkol4_Email"
         android:gravity="center"
         android:hint="..."
         android:layout_width="match_parent"
@@ -90,6 +95,7 @@
         android:layout_height="wrap_content"
         />
     <DatePicker
+        android:layout_gravity="left"
         android:calendarViewShown="false"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"></DatePicker>
@@ -151,9 +157,10 @@
                 android:layout_height="wrap_content" />
 
             <Button
+                android:onClick="ClickJindraUkol4odeslat"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
-                android:text="Tukni pro odeslani formulare"
+                android:text="@string/JindraUkol4_buttonOdeslat_Tukni_pro_odeslani_formulare"
                  android:layout_width="fill_parent"
                  android:layout_height="wrap_content"
                  android:background="#99CC00"
@@ -162,7 +169,7 @@
             <Button
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Tukni pro zruseni"
+                android:text="@string/jindraUkol4_buttonZrusit_Tukni_pro_zruseni"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="#FF4444"

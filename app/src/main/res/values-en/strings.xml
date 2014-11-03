@@ -7,13 +7,13 @@
     <string name="title_activity_jindra_ukol4">JindraUkol4</string>
     <string name="ButtonMainActivity_jindra_ukol4">Jindra Ukol:4</string>
     <string name="title_activity_marek_ukol4">MarekUkol4</string>
-    <string name="TextViewRegFormularJindraUkol4">Registrační formulář hotelu Jindra</string>
-    <string name="TextViewJindraActivityJmeno">jméno a příjmení</string>
-    <string name="TextViewJindraActivityAdresa">Adresa</string>
-    <string name="TextViewJindraActivityTelefon">Telefon</string>
-    <string name="TextViewJindraActivityEmail">email</string>
-    <string name="TextViewJindraActivityZacatekPobytu">Zacatek pobytu</string>
-    <string name="TextViewJindraActivityPocetdnu">počet dnů</string>
+    <string name="TextViewRegFormularJindraUkol4">Reservation form of Hotel Jindra</string>
+    <string name="TextViewJindraActivityJmeno">Firstname and Lastname</string>
+    <string name="TextViewJindraActivityAdresa">Address</string>
+    <string name="TextViewJindraActivityTelefon">Phone number</string>
+    <string name="TextViewJindraActivityEmail">E-mail</string>
+    <string name="TextViewJindraActivityZacatekPobytu">Arrival term</string>
+    <string name="TextViewJindraActivityPocetdnu">Number of nights</string>
     <string name="ButtonMainActivity_marekUkol4">Marek ukol: 4</string>
     <string name="MJA_4_nazevhotelu">Hotel register form: Marek</string>
     <string name="MJA_4_jmenoAprijmeni">Full name</string>
@@ -32,5 +32,16 @@
     <string name="MJA_4_ano">Yes</string>
     <string name="MJA_4_zrusit">Cancel</string>
     <string name="MJA_4_odeslatformular">Send form</string>
+    <string name="JindraUkol4_jednoluzkovy">Single room</string>
+    <string name="JindraUkol4_dvouluzkovy">Double room</string>
+    <string name="JindraUkol4_triluzkovy">Tripple room</string>
+    <string name="JindraUkol4_pokoj">Room type</string>
+    <string name="JindraUkol4_ne">not</string>
+    <string name="JindraUkol4_ano">yes</string>
+    <string name="JindraUkol4_kurak">Smoke room?</string>
+    <string name="JindraUkol4_snidane">Breakfast?</string>
+    <string name="jindraUkol4_buttonZrusit_Tukni_pro_zruseni">Click for cancel</string>
+    <string name="JindraUkol4_buttonOdeslat_Tukni_pro_odeslani_formulare">Click for Confirm</string>
+
 
 </resources>
