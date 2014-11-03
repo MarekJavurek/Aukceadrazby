@@ -19,8 +19,7 @@ import java.util.List;
 public class JindraUkol4 extends Activity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_jindra_ukol4);
 
@@ -82,9 +81,6 @@ public class JindraUkol4 extends Activity {
     public final static boolean isValidName(CharSequence target) {
         return !TextUtils.isEmpty(target);
     }
-
-
-
 
 
     @Override

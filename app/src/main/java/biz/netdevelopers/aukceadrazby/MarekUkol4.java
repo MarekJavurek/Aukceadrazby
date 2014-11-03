@@ -103,11 +103,11 @@ public class MarekUkol4 extends Activity {
         EditText telefon = (EditText) findViewById(R.id.MJA_4_telefon);
 
         if (!isValidEmail(email.getText())) {
-            email.setError("Email je vy špatném formátu");
+            email.setError("Email je ve špatném formátu");
             email.requestFocus();
             return false;
         } else if (!isValidPhone(telefon.getText())) {
-            telefon.setError("Telefon je vy špatném formátu");
+            telefon.setError("Telefon je ve špatném formátu");
             telefon.requestFocus();
             return false;
         } else if (!isValidName(jmeno.getText())) {
@@ -118,7 +118,7 @@ public class MarekUkol4 extends Activity {
             email.setError(null);
             telefon.setError(null);
             jmeno.setError(null);
-            Toast.makeText(this, "Validace OK", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Validace proběhla v pořádku", Toast.LENGTH_LONG).show();
             return true;
         }
     }

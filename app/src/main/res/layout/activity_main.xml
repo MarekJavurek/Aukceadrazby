@@ -7,11 +7,11 @@
     android:orientation="vertical">
 
     <Button
-        android:textSize="20sp"
         android:onClick="ClickJindraUkol4"
         android:textColor="#3762D2"
-        android:padding="10dp"
-        android:layout_width="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="5dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/ButtonMainActivity_jindra_ukol4"
         android:id="@+id/ButtonMainActivity_jindra_ukol4"
@@ -19,7 +19,9 @@
 
     <Button
         android:text="@string/ButtonMainActivity_marekUkol4"
-        android:layout_width="wrap_content"
+        android:padding="20dp"
+        android:layout_margin="5dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="ClickMarekUkol4"
         />
