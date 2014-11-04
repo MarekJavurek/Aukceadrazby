@@ -7,12 +7,18 @@ import android.util.Patterns;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 
@@ -34,6 +40,47 @@ public class JindraUkol4 extends Activity {
         Spinner sItems = (Spinner) findViewById(R.id.JindraActivitySpinerPocetdni);
         sItems.setAdapter(adapter);
     }
+    // vymazani formulare
+    public void ClickJindraUkol4zrusit (View view) {
+
+        // projde vsechny prvky v  LinearLayout a kdyz se jedna o EditText tak ho vymaze
+        ViewGroup group = (ViewGroup) findViewById(R.id.LinearLayoutJindraUkol4);
+        for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+            View v = group.getChildAt(i);
+            if (v instanceof EditText) {
+                ((EditText) v).setText("");
+            }
+        }
+
+        // vymazani ostatnich prvku co nejsou EditText
+
+        // datepicker
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        DatePicker datumod = (DatePicker) findViewById(R.id.DatePickerJindraUkol4);
+        datumod.updateDate(year, month, day);
+
+        // spinner
+        Spinner pocetdni = (Spinner) findViewById(R.id.JindraActivitySpinerPocetdni);
+        pocetdni.setSelection(0);
+
+        // radiogroup
+        RadioGroup rg = (RadioGroup) findViewById(R.id.RadioGroupJindraUkol4);
+        rg.clearCheck();
+
+        // checkbox
+        CheckBox ch = (CheckBox) findViewById(R.id.CheckBoxJindraUkol4);
+        ch.setChecked(false);
+
+        // togglebutton
+        ToggleButton tg = (ToggleButton) findViewById(R.id.ToggleButtonJindraUkol4);
+        tg.setChecked(false);
+
+
+    }
 
     // odeslani formulare
     public void ClickJindraUkol4odeslat(View view) {
@@ -51,18 +98,18 @@ public class JindraUkol4 extends Activity {
             jmeno.requestFocus();
             return false;
         } else if (!isValidPhone(telefon.getText())) {
-            telefon.setError("Telefon je vy špatném formátu");
+            telefon.setError("Telefon je ve špatném formátu");
             telefon.requestFocus();
             return false;
         } else if (!isValidEmail(email.getText())) {
-            email.setError("Email je vy špatném formátu");
+            email.setError("Email je ve špatném formátu");
             email.requestFocus();
             return false;
         } else {
             email.setError(null);
             telefon.setError(null);
             jmeno.setError(null);
-            Toast.makeText(this, "Validace OK", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Validace uspesna", Toast.LENGTH_LONG).show();
             return true;
         }
     }

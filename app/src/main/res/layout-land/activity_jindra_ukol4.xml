@@ -20,12 +20,17 @@
 <TextView
     android:fontFamily="sans-serif-medium"
     android:paddingTop="20dp"
-    android:textSize="23sp"
+    android:textSize="38sp"
     android:layout_gravity="center"
     android:text="@string/TextViewRegFormularJindraUkol4"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     />
+           <LinearLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
     <TextView
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -40,7 +45,13 @@
         android:hint="..."
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         />
+           </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
     <TextView
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -56,6 +67,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
     <TextView
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -72,6 +88,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
     <TextView
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
@@ -88,20 +109,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="220sp"
+            android:orientation="horizontal">
     <TextView
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
+        android:paddingLeft="60dp"
+        android:paddingTop="80dp"
         android:text="@string/TextViewJindraActivityZacatekPobytu"
         android:textSize="18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         />
+
     <DatePicker
         android:id="@+id/DatePickerJindraUkol4"
-        android:layout_gravity="left"
+        android:layout_gravity="right"
         android:calendarViewShown="false"
         android:layout_width="fill_parent"
         android:layout_height="match_parent"></DatePicker>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="50sp">
 
     <TextView
         android:paddingLeft="15dp"
@@ -113,11 +146,11 @@
         />
     <Spinner
         android:id="@+id/JindraActivitySpinerPocetdni"
-        android:layout_width="fill_parent"
+        android:layout_width="100sp"
         android:layout_height="wrap_content"></Spinner>
 
             <TextView
-                android:paddingLeft="15dp"
+                android:paddingLeft="30dp"
                 android:paddingTop="20dp"
                 android:text="@string/JindraUkol4_pokoj"
                 android:textSize="18sp"
@@ -142,33 +175,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
                 </RadioGroup>
-        <LinearLayout
-            android:paddingTop="20dp"
-            android:paddingLeft="30dp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
             <TextView
-
-
+                android:paddingLeft="30dp"
+                android:paddingTop="20dp"
                 android:text="@string/JindraUkol4_snidane"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
             <CheckBox
                 android:id="@+id/CheckBoxJindraUkol4"
-
+                android:paddingTop="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:paddingTop="20dp"
-            android:paddingLeft="30dp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
             <TextView
+                android:paddingLeft="30dp"
+                android:paddingTop="20dp"
                 android:text="@string/JindraUkol4_kurak"
                 android:textSize="18sp"
                 android:layout_width="wrap_content"
@@ -180,13 +201,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-
+        <LinearLayout
+            android:paddingTop="50sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
             <Button
                 android:onClick="ClickJindraUkol4odeslat"
                  android:layout_marginLeft="15dp"
                  android:layout_marginRight="15dp"
                 android:text="@string/JindraUkol4_buttonOdeslat_Tukni_pro_odeslani_formulare"
-                 android:layout_width="fill_parent"
+                 android:layout_width="350sp"
                  android:layout_height="wrap_content"
                  android:background="#99CC00"
                 android:drawableLeft="@drawable/ic_launcher_jindra_ukol4"
@@ -196,13 +221,13 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:text="@string/jindraUkol4_buttonZrusit_Tukni_pro_zruseni"
-                android:layout_width="fill_parent"
+                android:layout_width="350sp"
                 android:layout_height="wrap_content"
                 android:background="#FF4444"
                 android:drawableLeft="@drawable/ic_launcher_jindraukol4_krizek"
                 />
 
-
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
