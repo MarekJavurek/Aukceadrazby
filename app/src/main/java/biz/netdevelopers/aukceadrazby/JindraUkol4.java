@@ -84,39 +84,51 @@ public class JindraUkol4 extends Activity {
 
     // odeslani formulare
     public void ClickJindraUkol4odeslat(View view) {
-        validujFormular();
-    }
 
-    // validace formulare
-    private boolean validujFormular() {
         EditText jmeno = (EditText) findViewById(R.id.EditText_jindraUkol4_jmenoPrijmeni);
         EditText email = (EditText) findViewById(R.id.EditText_jindraUkol4_Email);
         EditText telefon = (EditText) findViewById(R.id.EditText_jindraUkol4_Telefon);
 
+        validujFormular(jmeno, email, telefon);
+    }
+
+    // validace formulare
+    private void validujFormular(EditText jmeno, EditText email, EditText telefon) {
+
+        boolean chyba = false;
+
         if (!isValidName(jmeno.getText())) {
             jmeno.setError("Jméno je povinné");
             jmeno.requestFocus();
-            return false;
-        } else if (!isValidPhone(telefon.getText())) {
+            chyba = true;
+        } else {
+            jmeno.setError(null);
+        }
+        if (!isValidPhone(telefon.getText())) {
             telefon.setError("Telefon je ve špatném formátu");
             telefon.requestFocus();
-            return false;
-        } else if (!isValidEmail(email.getText())) {
+            chyba = true;
+        } else {
+            telefon.setError(null);
+        }
+        if (!isValidEmail(email.getText())) {
             email.setError("Email je ve špatném formátu");
             email.requestFocus();
-            return false;
+            chyba = true;
         } else {
             email.setError(null);
-            telefon.setError(null);
-            jmeno.setError(null);
+        }
+
+
+        if (!chyba)
+        {
             Toast.makeText(this, "Validace uspesna", Toast.LENGTH_LONG).show();
-            return true;
         }
     }
 
     // fce na validaci emailu
-    public final static boolean isValidEmail(CharSequence target) {
-        return !TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches();
+    private boolean isValidEmail(CharSequence aaa) {
+        return !TextUtils.isEmpty(aaa) && Patterns.EMAIL_ADDRESS.matcher(aaa).matches();
     }
 
     // fce na validaci telefonu
