@@ -10,16 +10,23 @@ import android.widget.Toast;
 
 public class Filtry extends Activity {
 
-    MultiSelectionSpinner spinner;
+    MultiSelectionSpinner f_kraje;
+    MultiSelectionSpinner f_typ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filtry);
 
-        String[] array = { "one", "two", "three" };
-        spinner = (MultiSelectionSpinner) findViewById(R.id.mySpinner1);
-        spinner.setItems(array);
+
+
+        String[] kunda = { "Hl. m. Praha", "Středočeský", "Jihočeský", "Plzeňský", "Ústecký", "Královéhradecký", "Vysočina", "Olomoucký", "Moravskoslezský" };
+        f_kraje = (MultiSelectionSpinner) findViewById(R.id.f_kraje);
+        f_kraje.setItems(kunda);
+
+        String[] array = { "Aukce", "Dražba", "Prodej" };
+        f_typ = (MultiSelectionSpinner) findViewById(R.id.f_typ);
+        f_typ.setItems(array);
     }
 
 
@@ -46,7 +53,7 @@ public class Filtry extends Activity {
     }
 
     public void onClick(View v){
-        String s = spinner.getSelectedItemsAsString();
+        String s = "Vybrané typy: " + f_typ.getSelectedItemsAsString() + ", Vybrané kraje: " + f_kraje.getSelectedItemsAsString();
         Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
     }
 

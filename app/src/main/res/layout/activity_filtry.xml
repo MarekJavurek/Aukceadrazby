@@ -17,23 +17,26 @@
             android:layout_height="wrap_content" />
 
         <biz.netdevelopers.aukceadrazby.MultiSelectionSpinner
-            android:id="@+id/mySpinner1"
+            android:id="@+id/f_kraje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <biz.netdevelopers.aukceadrazby.MultiSelectionSpinner
+            android:id="@+id/f_typ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/mySpinner1"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="118dp"
-            android:text="Get Items"
+            android:text="Použít filtr"
             android:onClick="onClick"/>
 
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" android:text="Použít filtr" />
+
 
     </LinearLayout>
 </RelativeLayout>
