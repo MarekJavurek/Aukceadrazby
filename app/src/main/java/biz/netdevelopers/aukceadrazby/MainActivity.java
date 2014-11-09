@@ -1,11 +1,14 @@
 package biz.netdevelopers.aukceadrazby;
 
 import android.app.Activity;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.ExecutionException;
@@ -15,12 +18,23 @@ public class MainActivity extends Activity {
 
     VasmajetekProvider vmp;
 
+    Boolean tablet;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        tablet = false;
+        if(findViewById(R.id.detail_aukce) != null) {
+            tablet = true;
+            FragmentManager FM = getFragmentManager();
+            FragmentTransaction FT = FM.beginTransaction();
+        }
+        //Toast.makeText(this, tablet.toString(), Toast.LENGTH_SHORT).show();
+
         // nova instance tridy ktera bude poskytovat veskera data z API atd...
+        /*
         vmp = new VasmajetekProvider(this);
         try {
             vmp.getAll();
@@ -29,7 +43,7 @@ public class MainActivity extends Activity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
+        */
     }
     // http://stackoverflow.com/questions/15739635/how-to-return-value-from-async-task-in-android
     // http://codereview.stackexchange.com/questions/39123/efficient-way-of-having-synchronous-and-asynchronous-behavior-in-an-application
