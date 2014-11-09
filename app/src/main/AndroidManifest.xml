@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -18,9 +17,8 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-
         <activity
-            android:name=".MainActivity"
+            android:name="biz.netdevelopers.aukceadrazby.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,12 +27,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MarekUkol4"
+            android:name="biz.netdevelopers.aukceadrazby.MarekUkol4"
             android:label="@string/title_activity_marek_ukol4" >
         </activity>
         <activity
-            android:name=".JindraUkol4"
+            android:name="biz.netdevelopers.aukceadrazby.JindraUkol4"
             android:label="@string/title_activity_jindra_ukol4" >
+        </activity>
+        <activity
+            android:name="biz.netdevelopers.aukceadrazby.Ukoly"
+            android:label="@string/title_activity_ukoly" >
+        </activity>
+        <activity
+            android:name="biz.netdevelopers.aukceadrazby.Filtry"
+            android:label="@string/title_activity_filtry" >
         </activity>
     </application>
 

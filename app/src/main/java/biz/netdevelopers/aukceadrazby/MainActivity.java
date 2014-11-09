@@ -19,31 +19,35 @@ public class MainActivity extends Activity {
     VasmajetekProvider vmp;
 
     Boolean tablet;
+    FragmentManager FM;
+    Utils u;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        u = new Utils(this);
+
+        FM = getFragmentManager();
+        FragmentTransaction FT = FM.beginTransaction();
+        AuctionObjectListFragment list = new AuctionObjectListFragment();
+        FT.replace(R.id.seznam_aukci, list);
+
         tablet = false;
         if(findViewById(R.id.detail_aukce) != null) {
             tablet = true;
-            FragmentManager FM = getFragmentManager();
-            FragmentTransaction FT = FM.beginTransaction();
+
             AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
-            AuctionObjectListFragment list = new AuctionObjectListFragment();
-
-            FT.add(R.id.seznam_aukci, list);
-            FT.add(R.id.detail_aukce, detail);
-
-            FT.commit();
-
+            FT.replace(R.id.detail_aukce, detail);
         }
+
+        FT.commit();
 
         //Toast.makeText(this, tablet.toString(), Toast.LENGTH_SHORT).show();
 
         // nova instance tridy ktera bude poskytovat veskera data z API atd...
-        /*
+
         vmp = new VasmajetekProvider(this);
         try {
             vmp.getAll();
@@ -52,7 +56,7 @@ public class MainActivity extends Activity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        */
+
     }
     // http://stackoverflow.com/questions/15739635/how-to-return-value-from-async-task-in-android
     // http://codereview.stackexchange.com/questions/39123/efficient-way-of-having-synchronous-and-asynchronous-behavior-in-an-application
@@ -71,18 +75,23 @@ public class MainActivity extends Activity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
+
+            Intent intent = new Intent(this, Ukoly.class);
+            startActivity(intent);
+
+            return true;
+        }
+        else if (id == R.id.action_filters) {
+
+            Intent intent = new Intent(this, Filtry.class);
+            startActivity(intent);
+
             return true;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    public void ClickJindraUkol4(View view) {
-        Intent intent = new Intent(this, JindraUkol4.class);
-        startActivity(intent);
-    }
 
-    public void ClickMarekUkol4(View view) {
-        Intent intent = new Intent(this, MarekUkol4.class);
-        startActivity(intent);
-    }
+
+
 }

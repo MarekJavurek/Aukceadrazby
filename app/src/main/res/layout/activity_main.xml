@@ -7,24 +7,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <Button
-        android:onClick="ClickJindraUkol4"
-        android:textColor="#3762D2"
-        android:padding="20dp"
-        android:layout_margin="5dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/ButtonMainActivity_jindra_ukol4"
-        android:id="@+id/ButtonMainActivity_jindra_ukol4"
-        />
-
-    <Button
-        android:text="@string/ButtonMainActivity_marekUkol4"
-        android:padding="20dp"
-        android:layout_margin="5dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:onClick="ClickMarekUkol4"
-        />
+        <TextView android:text="Detail je řešen pomocí fragmentů a je vidět pouze v tablet módu." android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>

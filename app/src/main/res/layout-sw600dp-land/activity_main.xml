@@ -5,7 +5,7 @@
 
   <RelativeLayout
       android:id="@+id/seznam_aukci"
-      android:layout_width="100dp"
+      android:layout_width="250dp"
       android:layout_height="fill_parent">
 
 
