@@ -29,20 +29,26 @@ public class MainActivity extends Activity {
 
         u = new Utils(this);
 
-        FM = getFragmentManager();
-        FragmentTransaction FT = FM.beginTransaction();
-        AuctionObjectListFragment list = new AuctionObjectListFragment();
-        FT.replace(R.id.seznam_aukci, list);
+        if (savedInstanceState == null) {
 
-        tablet = false;
-        if(findViewById(R.id.detail_aukce) != null) {
-            tablet = true;
+            FM = getFragmentManager();
+            FragmentTransaction FT = FM.beginTransaction();
+            AuctionObjectListFragment list = new AuctionObjectListFragment();
+            FT.replace(R.id.seznam_aukci, list);
 
-            AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
-            FT.replace(R.id.detail_aukce, detail);
+            tablet = false;
+            if(findViewById(R.id.detail_aukce) != null) {
+                tablet = true;
+
+                AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
+                FT.replace(R.id.detail_aukce, detail);
+            } else {
+                //
+            }
+
+            FT.commit();
+
         }
-
-        FT.commit();
 
         //Toast.makeText(this, tablet.toString(), Toast.LENGTH_SHORT).show();
 
@@ -91,7 +97,21 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void klikfFragment(int pocet) {
+
+        FragmentTransaction FT = FM.beginTransaction();
+        AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
+
+        Bundle bundle = new Bundle();
+        bundle.putInt("id" , pocet);
+        detail.setArguments(bundle);
+
+        FT.replace(R.id.seznam_aukci, detail).addToBackStack( "tag" );
 
 
+        FT.commit();
+
+
+    }
 
 }

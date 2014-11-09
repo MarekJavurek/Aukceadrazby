@@ -7,7 +7,5 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-        <TextView android:text="Detail je řešen pomocí fragmentů a je vidět pouze v tablet módu." android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </LinearLayout>
