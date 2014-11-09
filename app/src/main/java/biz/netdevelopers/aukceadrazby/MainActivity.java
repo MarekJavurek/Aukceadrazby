@@ -30,7 +30,16 @@ public class MainActivity extends Activity {
             tablet = true;
             FragmentManager FM = getFragmentManager();
             FragmentTransaction FT = FM.beginTransaction();
+            AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
+            AuctionObjectListFragment list = new AuctionObjectListFragment();
+
+            FT.add(R.id.seznam_aukci, list);
+            FT.add(R.id.detail_aukce, detail);
+
+            FT.commit();
+
         }
+
         //Toast.makeText(this, tablet.toString(), Toast.LENGTH_SHORT).show();
 
         // nova instance tridy ktera bude poskytovat veskera data z API atd...
