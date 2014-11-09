@@ -30,7 +30,6 @@ public class AuctionObjectListFragment extends Fragment {
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                       //Toast.makeText(getActivity(), "aaa", Toast.LENGTH_SHORT).show();
                         int polozka = 1;
                         ((MainActivity)getActivity()).klikfFragment(polozka);
                     }
@@ -38,9 +37,6 @@ public class AuctionObjectListFragment extends Fragment {
         );
 
         return view;
-
-
-
 
     }
 

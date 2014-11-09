@@ -28,10 +28,20 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         u = new Utils(this);
+        FM = getFragmentManager();
 
         if (savedInstanceState == null) {
 
-            FM = getFragmentManager();
+            vmp = new VasmajetekProvider(this);
+            try {
+                vmp.getAll();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+
             FragmentTransaction FT = FM.beginTransaction();
             AuctionObjectListFragment list = new AuctionObjectListFragment();
             FT.replace(R.id.seznam_aukci, list);
@@ -41,6 +51,11 @@ public class MainActivity extends Activity {
                 tablet = true;
 
                 AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
+
+                Bundle bundle = new Bundle();
+                bundle.putInt("id" , 0);
+                detail.setArguments(bundle);
+
                 FT.replace(R.id.detail_aukce, detail);
             } else {
                 //
@@ -53,15 +68,6 @@ public class MainActivity extends Activity {
         //Toast.makeText(this, tablet.toString(), Toast.LENGTH_SHORT).show();
 
         // nova instance tridy ktera bude poskytovat veskera data z API atd...
-
-        vmp = new VasmajetekProvider(this);
-        try {
-            vmp.getAll();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
     }
     // http://stackoverflow.com/questions/15739635/how-to-return-value-from-async-task-in-android
@@ -106,7 +112,13 @@ public class MainActivity extends Activity {
         bundle.putInt("id" , pocet);
         detail.setArguments(bundle);
 
-        FT.replace(R.id.seznam_aukci, detail).addToBackStack( "tag" );
+        if (tablet == true) {
+            FT.replace(R.id.detail_aukce, detail);
+        } else {
+            FT.replace(R.id.seznam_aukci, detail).addToBackStack( "tag" );
+        }
+
+
 
 
         FT.commit();
