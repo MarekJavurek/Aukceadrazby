@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,6 +23,8 @@ public class MainActivity extends Activity {
     FragmentManager FM;
     Utils u;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +32,11 @@ public class MainActivity extends Activity {
 
         u = new Utils(this);
         FM = getFragmentManager();
+        tablet = false;
 
-        if (savedInstanceState == null) {
+        FragmentTransaction FT = FM.beginTransaction();
+
+        if (savedInstanceState == null && findViewById(R.id.detail_aukce) != null) {
 
             vmp = new VasmajetekProvider(this);
             try {
@@ -42,28 +48,31 @@ public class MainActivity extends Activity {
             }
 
 
-            FragmentTransaction FT = FM.beginTransaction();
+
             AuctionObjectListFragment list = new AuctionObjectListFragment();
             FT.replace(R.id.seznam_aukci, list);
 
-            tablet = false;
-            if(findViewById(R.id.detail_aukce) != null) {
-                tablet = true;
 
-                AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
 
-                Bundle bundle = new Bundle();
-                bundle.putInt("id" , 0);
-                detail.setArguments(bundle);
 
-                FT.replace(R.id.detail_aukce, detail);
-            } else {
-                //
-            }
 
-            FT.commit();
 
         }
+
+        if(findViewById(R.id.detail_aukce) != null) {
+            tablet = true;
+
+            AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
+
+            Bundle bundle = new Bundle();
+            bundle.putInt("id" , 0);
+            detail.setArguments(bundle);
+
+            FT.replace(R.id.detail_aukce, detail);
+        } else {
+            //
+        }
+        FT.commit();
 
         //Toast.makeText(this, tablet.toString(), Toast.LENGTH_SHORT).show();
 
@@ -112,17 +121,13 @@ public class MainActivity extends Activity {
         bundle.putInt("id" , pocet);
         detail.setArguments(bundle);
 
-        if (tablet == true) {
+        if ((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) && (this.tablet == true)) {
             FT.replace(R.id.detail_aukce, detail);
         } else {
             FT.replace(R.id.seznam_aukci, detail).addToBackStack( "tag" );
         }
 
-
-
-
         FT.commit();
-
 
     }
 
