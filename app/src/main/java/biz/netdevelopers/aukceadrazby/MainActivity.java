@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
 
         FragmentTransaction FT = FM.beginTransaction();
 
-        if (savedInstanceState == null && findViewById(R.id.detail_aukce) != null) {
+        if (savedInstanceState == null ) {
 
             vmp = new VasmajetekProvider(this);
             try {
