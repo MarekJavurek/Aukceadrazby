@@ -101,6 +101,7 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+
     public void klikfFragment(int pocet) { // po kliknuti urci kde se zobrazi fragmet s detajlem
 
         FragmentTransaction FT = FM.beginTransaction();
