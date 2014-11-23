@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 
         FragmentTransaction FT = FM.beginTransaction();
 
-        if (savedInstanceState == null) { // zapiname aplikace poprve ? budeme stahovat data ?
+        if (savedInstanceState == null) { // zapiname aplikace poprve ? budeme stahovat data ????????
 
             vmp = new VasmajetekProvider(this);
             try {
