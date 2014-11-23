@@ -23,10 +23,14 @@ public class MainActivity extends Activity {
     FragmentManager FM;
     Utils u;
 
+    boolean isTablet;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        isTablet = getResources().getBoolean(R.bool.isTablet);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
