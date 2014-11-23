@@ -1,5 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="biz.netdevelopers.aukceadrazby.AuctionObjectDetailFragment">
 
@@ -27,14 +28,14 @@
                     android:layout_height="200dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/dum" />
+                    android:src="@drawable/ic_launcher" />
 
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/dumm" />
+                    android:src="@drawable/ic_launcher" />
 
             </LinearLayout>
 
@@ -48,25 +49,26 @@ nezadáno\n
 Datum prohlídky: 04.10.2014 11:00\n
 Odhadní cena: 650 000 Kč\n
 Jistota: 120 000 Kč\n
-Minimální příhoz v dražbě: 5 000 Kč"/>
+Minimální příhoz v dražbě: 5 000 Kč" />
 
             <TextView
                 android:textSize="40sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Popis"/>
+                android:text="Popis" />
+
             <TextView
                 android:textSize="20sp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Předmětem dražby je rekreační chata s pozemky, který je přízemní, nepodsklepená s podkrovím nad částí půdorysu chaty (nad původní stavbou). Střecha sedlová, krytina z plechových šablon a tavných živičných lepenek. Voda zavedena a dodávaná z vlastní studny (po povodni studna údajně bez vody), teplá voda byly dodávána z el. průtokového ohřívače. Zařizovací předměty jsou osazeny standardního provedení, umyvadlo, sprchový kout dodatečně osazen, záchod splachovací. Odvod splašků je do vyvážecí žumpy. Vytápění je lokální a ústřední. Topným mediem je kotel ústředního topení na tuhá paliva a kotel elektrický, osazena krbová kamna. Dispoziční řešení - 1.n.p. vstup, veranda, chodba, kuchyň, 2 x pokoj, koupelna záchod, kotelna; 2.n.p. podkroví chodba a 2 pokoje. Rekreační chata byla postavena ve dvou fázích. Původní část je chata se sedlovou střechou z roku 1953, stáří 61 let, přístavba s plochou střechou zřízena a zřízeno podkroví v původní části před 34 lety. Údržba zhoršená .
 
-Stav objektu: dobrý"/>
+Stav objektu: dobrý" />
 
 
         </LinearLayout>
 
-        </ScrollView>
+    </ScrollView>
 
 
 </FrameLayout>

@@ -195,8 +195,7 @@
                 android:text="@string/JindraUkol4_buttonOdeslat_Tukni_pro_odeslani_formulare"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#99CC00"
-                android:drawableLeft="@drawable/ic_launcher_jindra_ukol4" />
+                android:background="#99CC00" />
 
             <Button
                 android:onClick="ClickJindraUkol4zrusit"
@@ -205,8 +204,7 @@
                 android:text="@string/jindraUkol4_buttonZrusit_Tukni_pro_zruseni"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:background="#FF4444"
-                android:drawableLeft="@drawable/ic_launcher_jindraukol4_krizek" />
+                android:background="#FF4444" />
 
 
         </LinearLayout>
