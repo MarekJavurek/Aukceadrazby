@@ -16,17 +16,6 @@ public class Ukoly extends Activity {
         setContentView(R.layout.activity_ukoly);
     }
 
-    public void ClickJindraUkol4(View view) {
-        Intent intent = new Intent(this, JindraUkol4.class);
-        startActivity(intent);
-    }
-
-    public void ClickMarekUkol4(View view) {
-        Intent intent = new Intent(this, MarekUkol4.class);
-        startActivity(intent);
-    }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
