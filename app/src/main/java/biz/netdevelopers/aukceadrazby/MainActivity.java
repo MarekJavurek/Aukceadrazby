@@ -62,7 +62,7 @@ public class MainActivity extends Activity {
             AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
 
             Bundle bundle = new Bundle();
-            bundle.putInt("id" , 0);
+            bundle.putInt("id", 0);
             detail.setArguments(bundle);
 
             FT.replace(R.id.detail_aukce, detail);
@@ -108,13 +108,13 @@ public class MainActivity extends Activity {
         AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
 
         Bundle bundle = new Bundle();
-        bundle.putInt("id" , pocet);
+        bundle.putInt("id", pocet);
         detail.setArguments(bundle);
 
         if ((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) && (this.isTablet == true)) {
             FT.replace(R.id.detail_aukce, detail);
         } else {
-            FT.replace(R.id.seznam_aukci, detail).addToBackStack( "tag" );
+            FT.replace(R.id.seznam_aukci, detail).addToBackStack("tag");
         }
 
         FT.commit();

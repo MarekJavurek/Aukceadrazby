@@ -19,12 +19,11 @@ public class Filtry extends Activity {
         setContentView(R.layout.activity_filtry);
 
 
-
-        String[] kunda = { "Hl. m. Praha", "Středočeský", "Jihočeský", "Plzeňský", "Ústecký", "Královéhradecký", "Vysočina", "Olomoucký", "Moravskoslezský" };
+        String[] kunda = {"Hl. m. Praha", "Středočeský", "Jihočeský", "Plzeňský", "Ústecký", "Královéhradecký", "Vysočina", "Olomoucký", "Moravskoslezský"};
         f_kraje = (MultiSelectionSpinner) findViewById(R.id.f_kraje);
         f_kraje.setItems(kunda);
 
-        String[] array = { "Aukce", "Dražba", "Prodej" };
+        String[] array = {"Aukce", "Dražba", "Prodej"};
         f_typ = (MultiSelectionSpinner) findViewById(R.id.f_typ);
         f_typ.setItems(array);
     }
@@ -52,7 +51,7 @@ public class Filtry extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClick(View v){
+    public void onClick(View v) {
         String s = "Vybrané typy: " + f_typ.getSelectedItemsAsString() + ", Vybrané kraje: " + f_kraje.getSelectedItemsAsString();
         Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
     }

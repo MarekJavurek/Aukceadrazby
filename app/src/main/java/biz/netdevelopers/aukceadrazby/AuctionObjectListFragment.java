@@ -18,8 +18,6 @@ import android.widget.Toast;
 public class AuctionObjectListFragment extends Fragment {
 
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
@@ -31,7 +29,7 @@ public class AuctionObjectListFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         int polozka = 1;
-                        ((MainActivity)getActivity()).klikfFragment(polozka);
+                        ((MainActivity) getActivity()).klikfFragment(polozka);
                     }
                 }
         );
@@ -39,7 +37,6 @@ public class AuctionObjectListFragment extends Fragment {
         return view;
 
     }
-
 
 
 }

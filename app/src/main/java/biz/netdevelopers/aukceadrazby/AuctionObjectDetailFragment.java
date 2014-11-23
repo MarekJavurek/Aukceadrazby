@@ -15,7 +15,7 @@ public class AuctionObjectDetailFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         int id = getArguments().getInt("id");
-        Toast.makeText(((MainActivity)getActivity()),String.valueOf(id),Toast.LENGTH_SHORT).show();
+        Toast.makeText(((MainActivity) getActivity()), String.valueOf(id), Toast.LENGTH_SHORT).show();
 
         return inflater.inflate(R.layout.fragment_auction_object_detail, container, false);
     }

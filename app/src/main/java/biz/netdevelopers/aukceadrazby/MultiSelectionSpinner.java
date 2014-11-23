@@ -1,17 +1,17 @@
 package biz.netdevelopers.aukceadrazby;
 
-        import java.util.Arrays;
-        import java.util.LinkedList;
-        import java.util.List;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
-        import android.app.AlertDialog;
-        import android.content.Context;
-        import android.content.DialogInterface;
-        import android.content.DialogInterface.OnMultiChoiceClickListener;
-        import android.util.AttributeSet;
-        import android.widget.ArrayAdapter;
-        import android.widget.Spinner;
-        import android.widget.SpinnerAdapter;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnMultiChoiceClickListener;
+import android.util.AttributeSet;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 // http://v4all123.blogspot.in/2013/09/spinner-with-multiple-selection-in.html
 
