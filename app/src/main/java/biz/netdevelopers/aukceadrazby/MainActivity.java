@@ -40,7 +40,7 @@ public class MainActivity extends Activity {
 
         FragmentTransaction FT = FM.beginTransaction();
 
-        if (savedInstanceState == null ) {
+        if (savedInstanceState == null) {
 
             vmp = new VasmajetekProvider(this);
             try {
@@ -51,19 +51,12 @@ public class MainActivity extends Activity {
                 e.printStackTrace();
             }
 
-
-
             AuctionObjectListFragment list = new AuctionObjectListFragment();
             FT.replace(R.id.seznam_aukci, list);
 
-
-
-
-
-
         }
 
-        if(findViewById(R.id.detail_aukce) != null) {
+        if (isTablet) { // findViewById(R.id.detail_aukce) != null
             tablet = true;
 
             AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
@@ -73,8 +66,7 @@ public class MainActivity extends Activity {
             detail.setArguments(bundle);
 
             FT.replace(R.id.detail_aukce, detail);
-        } else {
-            //
+        } else {            //
         }
         FT.commit();
 
