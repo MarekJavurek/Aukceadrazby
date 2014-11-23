@@ -19,11 +19,11 @@ public class MainActivity extends Activity {
 
     VasmajetekProvider vmp;
 
-    Boolean tablet;
+
     FragmentManager FM;
     Utils u;
 
-    boolean isTablet = false;
+    boolean isTablet;
 
 
     @Override
@@ -36,11 +36,11 @@ public class MainActivity extends Activity {
 
         u = new Utils(this);
         FM = getFragmentManager();
-        tablet = false;
+
 
         FragmentTransaction FT = FM.beginTransaction();
 
-        if (savedInstanceState == null) {
+        if (savedInstanceState == null) { // zapiname aplikace poprve ? budeme stahovat data ?
 
             vmp = new VasmajetekProvider(this);
             try {
@@ -56,8 +56,8 @@ public class MainActivity extends Activity {
 
         }
 
-        if (findViewById(R.id.detail_aukce) != null) { // isTablet
-            tablet = true;
+        if (isTablet) { // aplikace bezi v modu na sirku a je na tabletu cili zobrazuje i detajl  findViewById(R.id.detail_aukce) != null
+
 
             AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
 
@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void klikfFragment(int pocet) {
+    public void klikfFragment(int pocet) { // po kliknuti urci kde se zobrazi fragmet s detajlem
 
         FragmentTransaction FT = FM.beginTransaction();
         AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
@@ -117,7 +117,7 @@ public class MainActivity extends Activity {
         bundle.putInt("id" , pocet);
         detail.setArguments(bundle);
 
-        if ((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) && (this.tablet == true)) {
+        if ((getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) && (this.isTablet == true)) {
             FT.replace(R.id.detail_aukce, detail);
         } else {
             FT.replace(R.id.seznam_aukci, detail).addToBackStack( "tag" );
