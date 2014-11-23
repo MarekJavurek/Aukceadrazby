@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
     FragmentManager FM;
     Utils u;
 
-    boolean isTablet;
+    boolean isTablet = false;
 
 
     @Override
