@@ -36,7 +36,6 @@ public class VasmajetekProvider {
     public ArrayList<AuctionObject> getAll() throws ExecutionException, InterruptedException {
         // ArrayList<AuctionObject> all = new ArrayList<AuctionObject>();
 
-
         // je uzivatel online?
         if (isOnline) {
 
