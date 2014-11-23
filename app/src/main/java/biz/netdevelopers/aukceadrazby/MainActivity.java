@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 
         }
 
-        if (isTablet) { // findViewById(R.id.detail_aukce) != null
+        if (findViewById(R.id.detail_aukce) != null) { // isTablet
             tablet = true;
 
             AuctionObjectDetailFragment detail = new AuctionObjectDetailFragment();
